@@ -1,5 +1,24 @@
 <!-- <div id='container'> -->
 <div id='container' ng-controller='LinksController' >
   <!-- Your html here -->
-  <pre>BLAHHHH!</pre>
+
+<!-- Insert a link with:
+      * icon of file
+      * Name of site and original URL
+      * link to shortened
+      *
+      * TODO: figure out official format on page.
+  -->
+
+  <ul>
+  <li ng-repeat='link in data.links'><a href="{{link.origUrl}}">{{link.name}}</a></li>
+  </ul>
+
+  <pre>Outputting the data from the controller:
+
+  {{ data }}
+  {{ str }}
+
+  </pre>
+
 </div>
