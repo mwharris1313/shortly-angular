@@ -4,9 +4,21 @@ angular.module('shortly.services', [])
   // Your code here
 
   // Added getLinks based off Auth
-  var getLinks = function (link) {
+  var getLinks = function (cb) {
     return $http({
       method: 'GET',
+      url: '/api/links'
+    })
+    .then(function (resp) {
+      cb(resp.data);
+    });
+
+  };
+
+//nothing below the return runs
+  var addLink = function (link) {
+    return $http({
+      method: 'POST',
       url: '/api/links',
       data: link
     })
@@ -14,9 +26,12 @@ angular.module('shortly.services', [])
       return resp.data;
     });
   };
+
   return {
-    getLinks: getLinks
+    getLinks: getLinks,
+    addLink: addLink
   };
+
 
 })
 .factory('Auth', function ($http, $location, $window) {

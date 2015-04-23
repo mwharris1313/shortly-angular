@@ -23,3 +23,6 @@ LinkSchema.pre('save', function(next){
 });
 
 module.exports = mongoose.model('Link', LinkSchema);
+
+// NOTE TO SELF: I think we need to define Link.find
+// Link.find is used in linkController.js
