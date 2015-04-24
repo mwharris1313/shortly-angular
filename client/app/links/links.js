@@ -22,6 +22,8 @@ angular.module('shortly.links', [])
   //   shortenedUrl: 'someroute3'
   // }]; // NOTE TO SELF: figure out how to fill this with non-hard-coded values.
   $scope.getLinks = Links.getLinks;
-  $scope.getLinks(function(){}); // EXPERIMENT
+  $scope.getLinks(function(data){
+    $scope.data.links = data;
+  }); // EXPERIMENT
 
 });

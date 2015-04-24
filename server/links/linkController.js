@@ -21,7 +21,7 @@ module.exports = {
   },
 
   allLinks: function (req, res, next) {
-    console.log('serverLinkController allLinks()');
+    console.log('****** serverLinkController allLinks()');
 
   var findAll = Q.nbind(Link.find, Link);
 
@@ -35,7 +35,7 @@ module.exports = {
   },
 
   newLink: function (req, res, next) {
-    console.log('serverLinkController newLinks()');
+    console.log('****** serverLinkController newLinks()');
 
     var url = req.body.url;
     console.log(req.body);

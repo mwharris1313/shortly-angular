@@ -1,8 +1,19 @@
-<div id='container' ng-controller='ShortenController' >
+<div id="container">
 <!-- Your code here -->
 <pre>
 {{link}}
 </pre>
+
+<div id="addLink">
+  <h1>Add Link</h1>
+  <form name="linkForm" ng-submit="addLink(link)">
+    <input type="text" ng-model="link.url">
+    <button>Add Link</button>
+    {{link}}
+  </form>
+  <a href="#/signup">Don't have an account? <strong>Signup</strong> ...</a>
+</div>
+
 </div>
 
 
