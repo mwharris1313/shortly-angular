@@ -10,15 +10,17 @@
       * TODO: figure out official format on page.
   -->
 
-  <ul>
-  <li ng-repeat='link in data.links'><a href="{{link.origUrl}}">{{link.name}}</a></li>
-  </ul>
-
-  <pre>Outputting the data from the controller:
-
-  {{ data |}}
-  {{ str }}
-
-  </pre>
+<!-- {{ data.links }} -->
+  <div>
+  <div class='link' ng-repeat='link in data.links'>
+    <a href="{{link.url}}">
+      <img src='assets/redirect_icon.png'>
+      <div class="original">{{link.link}}</div>
+      <div class="title">{{link.title}}</div>
+      <div class="">{{link.url}}</div>
+    </a>
+<div class='visits'><span class='count'>3</span> visits</div>
+  </div>
+  </div>
 
 </div>

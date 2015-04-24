@@ -29,7 +29,10 @@ angular.module('shortly', [
       controller: 'ShortenController'
     })
     .otherwise({
-      templateUrl: 'app/shorten/.html'
+      templateUrl: 'app/links/links.html',
+      controller: 'LinksController'
+
+      // redirect: '/links'
       // will need to authenticate, send to links if logged in
       // redirect to login if not logged in
     });
